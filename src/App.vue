@@ -1,27 +1,21 @@
 <template>
+
         <Nav></Nav>
-        <!-- Masthead-->
-        <Header></Header>
+        <!-- <Header></Header> -->
         <div>
-                    <button @click="redirect">Redirect</button>
+        <button @click="redirect">Redirect</button>
         <button @click="back">Go back</button>
         <button @click="forward">Go forward</button>
         </div>
 
         <router-view/>
-        <!-- Services-->
-       <Services></Services>
-        <!-- Portfolio Grid-->
-       <Portfolio></Portfolio>
-        <!-- About-->
-        <About></About>
-        <!-- Team-->
-        <Team></Team>
-        <!-- Clients-->
-        <Clients></Clients>
-        <!-- Contact-->
-        <Contact></Contact>
-        <!-- Footer-->
+        
+       <!-- <Services></Services> -->
+       <!-- <Portfolio></Portfolio> -->
+        <!-- <About></About> -->
+        <!-- <Team></Team> -->
+        <!-- <Clients></Clients> -->
+        <!-- <Contact></Contact> -->
         <Footer></Footer>
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
@@ -238,25 +232,25 @@
 
 <script>
 import Nav from './components/Nav.vue'
-import Header from './components/Header.vue'
-import Services from './components/Services.vue'
-import Portfolio from './components/Portfolio.vue'
-import About from './components/About.vue'
-import Team from './components/Team.vue'
-import Clients from './components/Clients.vue'
-import Contact from './components/Contact.vue'
+// import Header from './components/Header.vue'
+// import Services from './components/Services.vue'
+// import Portfolio from './components/Portfolio.vue'
+// import About from './components/About.vue'
+// import Team from './components/Team.vue'
+// import Clients from './components/Clients.vue'
+// import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
     Nav,
-    Header,
-    Services,
-    Portfolio,
-    About,
-    Team,
-    Clients,
-    Contact,
+    // Header,
+    // Services,
+    // Portfolio,
+    // About,
+    // Team,
+    // Clients,
+    // Contact,
     Footer,
   },
   methods: {
