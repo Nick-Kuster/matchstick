@@ -3,11 +3,13 @@ import About from '../views/About'
 import Home  from '../views/Home'
 import Jobs  from '../views/jobs/Jobs'
 import JobDetails  from '../views/jobs/JobDetails'
+import UnderConstruction  from '../views/UnderConstruction'
 import NotFound  from '../views/NotFound'
 
 
 const routes = [
-    { path: '/', component: Home, name: 'Home' },
+    { path: '/', component: UnderConstruction, name: 'UnderConstruction' },
+    { path: '/Home', component: Home, name: 'Home' },
     { path: '/About', component: About, name: 'About' },
     { path: '/Jobs', component: Jobs, name: 'Jobs' },
     { path: '/Jobs/:id', component: JobDetails, name: 'JobDetails', props: true },
