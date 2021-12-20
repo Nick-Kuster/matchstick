@@ -20,8 +20,6 @@
 </script>
 
 <style>
-    .outer-coming-soon {
-    }
     .coming-soon {
         position: relative; 
         min-height: 35rem;
