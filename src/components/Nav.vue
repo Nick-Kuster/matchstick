@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg ">
     <button
       class="navbar-toggler"
       type="button"
@@ -9,23 +9,24 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">
+           <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+      </span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="m-auto inner-nav">
-            <a  href="#page-top" class="mr-lg-5 d-none d-lg-block"><img src="../assets/img/matchstick/Logo.png" class="logo d-s-none" alt="..." /></a>
-            <ul class="navbar-nav  navbar-items">
+        <div class="mx-auto inner-nav">
+            <ul class="navbar-nav navbar-items">
                 <!-- <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" to="/"><strong>HOME</strong></router-link></li> -->
-                <!-- <li class="nav-item dropdown ml-lg-5 m-auto">
+                <li class="nav-item dropdown ml-lg-5 m-auto">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <strong>RACE</strong>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <router-link class="dropdown-item" to="/"><strong>RACE INFO</strong></router-link>
-                    <a class="dropdown-item" href="#"><strong>RACE MAP</strong></a>
+                        <router-link class="dropdown-item" to="/"><strong>RACE INFO</strong></router-link>
+                        <a class="dropdown-item" href="#"><strong>RACE MAP</strong></a>
                     </div>
                 </li>
-                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'About' }"><strong>TRAINING</strong></router-link></li>
+                <!-- <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'About' }"><strong>TRAINING</strong></router-link></li>
                 <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Jobs' }"><strong>REGISTER</strong></router-link></li>
                 <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Jobs' }"><strong>SPONSERS</strong></router-link></li>
                 <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Jobs' }"><strong>NEWS/UPDATES</strong></router-link></li>
@@ -76,17 +77,32 @@ export default {
     }
     .navbar {
         justify-content: end;
+        background-color: darkred;
     }
-
+    .nav-link {
+        color: #ffffff;
+    }
+    .dropdown-menu {        
+        background-color: darkred;
+        border:none;
+    }
+    .dropdown-item {        
+        color: #ffffff;
+    } 
+    .navbar-toggler-icon {        
+        color: #ffffff !important;
+        border: none;
+    }
     @media (min-width: 992px) {
         .dropdown:hover .dropdown-menu {
             display: block;        
         }
         .dropdown-menu {
             margin-top: 0;
+            background-color: darkred;
         }
         .navbar {
-            min-height: 10rem;
+            min-height: 3rem;
         }
     }
 
