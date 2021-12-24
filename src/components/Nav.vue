@@ -1,57 +1,46 @@
 <template>
   <nav class="navbar navbar-expand-lg ">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon">
-           <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-      </span>
-    </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="mx-auto inner-nav">
+        <div class="m-auto inner-nav">
             <ul class="navbar-nav navbar-items">
                 <!-- <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" to="/"><strong>HOME</strong></router-link></li> -->
                 <li class="nav-item dropdown ml-lg-5 m-auto">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <router-link class="dropdown-toggle nav-link"  id="navbarDropdown" to="/" aria-haspopup="true" aria-expanded="false"><strong>RACE INFO</strong></router-link>
+                    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <strong>RACE</strong>
-                    </a>
+                    </a> -->
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <router-link class="dropdown-item" to="/"><strong>RACE INFO</strong></router-link>
-                        <a class="dropdown-item" href="#"><strong>RACE MAP</strong></a>
+                        <router-link class="dropdown-item nav-link" to="/"><strong>RACE INFO</strong></router-link>
+                        <router-link class="dropdown-item nav-link" to="/About"><strong>RACE MAP</strong></router-link>
                     </div>
                 </li>
-                <!-- <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'About' }"><strong>TRAINING</strong></router-link></li>
+                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'About' }"><strong>TRAINING</strong></router-link></li>
                 <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Jobs' }"><strong>REGISTER</strong></router-link></li>
                 <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Jobs' }"><strong>SPONSERS</strong></router-link></li>
                 <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Jobs' }"><strong>NEWS/UPDATES</strong></router-link></li>
                 <li class="nav-item dropdown ml-lg-5 m-auto">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <strong>GET INVOLVED</strong>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><strong>VOLUNTEER</strong></a>
-                    <a class="dropdown-item" href="#"><strong>BECOME A SPONSER</strong></a>
+                    <a class="dropdown-item nav-link" href="#"><strong>VOLUNTEER</strong></a>
+                    <a class="dropdown-item nav-link"  href="#"><strong>BECOME A SPONSER</strong></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"><strong>DONATE</strong></a>
+                    <a class="dropdown-item nav-link" href="#"><strong>DONATE</strong></a>
                     </div>
                 </li>
                 <li class="nav-item dropdown ml-lg-5 m-auto">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
                         <strong>CONTACT US</strong>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><strong>OUR CONTACT INFO</strong></a>
-                    <a class="dropdown-item" href="#"><strong>ABOUT THE RACE</strong></a>
+                    <a class="dropdown-item nav-link" href="#"><strong>OUR CONTACT INFO</strong></a>
+                    <a class="dropdown-item nav-link" href="#"><strong>ABOUT THE RACE</strong></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"><strong>DONATE</strong></a>
+                    <a class="dropdown-item nav-link" href="#"><strong>DONATE</strong></a>
                     </div>
-                </li> -->
+                </li>
             </ul>
         </div>
     </div>
@@ -60,7 +49,9 @@
 
 <script>
 export default {
-  setup() {},
+  setup() {
+
+  }
 };
 </script>
 
@@ -70,36 +61,67 @@ export default {
     }
     .inner-nav {
         display:flex;
-        justify-content: center;
-    }
-    .navbar-items {
-        justify-content: center;
     }
     .navbar {
         justify-content: end;
-        background-color: darkred;
+        background: rgba(187, 44, 46, 0.9);
+        right: 0;
     }
     .nav-link {
         color: #ffffff;
     }
     .dropdown-menu {        
-        background-color: darkred;
         border:none;
+        border-bottom-right-radius: 15%;
+        border-bottom-left-radius: 15%;
+        display: block;
+        background:none;
     }
     .dropdown-item {        
         color: #ffffff;
     } 
-    .navbar-toggler-icon {        
-        color: #ffffff !important;
-        border: none;
+    .dropdown-menu .dropdown-item:hover {
+        opacity: .9;
+        background:none;
     }
+    .nav-link.router-link-active {
+        background: rgba(221, 201, 202, 0.397);
+        
+        color: black;
+        border-radius: 5%
+    }
+    .dropdown-menu .nav-link.router-link-active {
+        background: rgba(221, 201, 202, 0.397);
+        color: black;
+        border: none;
+        border-radius: 5%
+    }
+    .nav-link:hover {
+        opacity: 90%;
+    }
+    
     @media (min-width: 992px) {
         .dropdown:hover .dropdown-menu {
             display: block;        
         }
         .dropdown-menu {
             margin-top: 0;
-            background-color: darkred;
+            display: none;
+            background: rgba(187, 44, 46, 0.9);
+            animation: growDown 400ms ease-in-out forwards;
+            transform-origin: top center;
+        }
+
+        @keyframes growDown {
+            0% {
+                transform: scaleY(0)
+            }
+            80% {
+                transform: scaleY(1.1)
+            }
+            100% {
+                transform: scaleY(1)
+            }
         }
         .navbar {
             min-height: 3rem;
