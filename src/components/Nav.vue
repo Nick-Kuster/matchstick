@@ -87,7 +87,7 @@ export default {
         border-radius: 5%
     }
     .nav-link:hover {
-        opacity: 90%;
+        opacity: .9;
     }
     
     @media (min-width: 992px) {
