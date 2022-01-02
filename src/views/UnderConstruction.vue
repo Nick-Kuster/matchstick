@@ -6,7 +6,7 @@
             <header  class="mb-5">Coming Soon!</header>
             <h1>We are looking forward to the 2022 Matchstick race!</h1>
             <h1>While we get things set up here, you can keep up-to-date on our Facebook page:</h1>
-            <h1><a class="btn btn-primary btn-social fb-link" href="https://www.facebook.com/MatchStickChallenge"><span class="fab fa-facebook-f facebook"></span></a></h1>
+            <a class="btn btn-primary btn-social " href="https://www.facebook.com/MatchStickChallenge"><span class="fab fa-facebook-f facebook "></span></a>
         </div>
     </div>
 </div>
@@ -20,23 +20,13 @@
 
 <style scoped>
     .coming-soon {
-        position: relative; 
         min-height: 35rem;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-image: url('../assets/img/matchstick/Runners.jpg');
     }
-        .coming-soon::before {
-            content: "";
-            background-image: url('https://scontent-ort2-2.xx.fbcdn.net/v/t31.18172-8/28071236_2062077487404765_685366197680625717_o.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=XhSl12trIXsAX9fzlOf&_nc_oc=AQlBciSM_CAfjiO3B-2yqSaOPS_QIqFca3jPMXwvx_i7eVQsU-YfijcoMFbxth2hNKE&_nc_ht=scontent-ort2-2.xx&oh=00_AT9Vpyea3YWPKs1-Bl0A90wtkw7ZNgsTuM3ByI9hFP7LpQ&oe=61E73B6F');
-            filter: opacity(20%);
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px; 
-        }
     .inner-coming-soon {
         max-width: 70rem;
         text-align: center;
@@ -44,9 +34,6 @@
     .break { height: 12px;}
     .facebook {
         font-size: 3rem;
-    }
-    .fb-link {
-        border-radius: 100;
     }
     header {
         font-size: 5rem;

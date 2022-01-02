@@ -9,12 +9,12 @@ import NotFound  from '../views/NotFound'
 
 const routes = [
     { path: '/', component: UnderConstruction, name: 'UnderConstruction' },
-    { path: '/Home', component: Home, name: 'Home' },
-    { path: '/About', component: About, name: 'About' },
-    { path: '/Jobs', component: Jobs, name: 'Jobs' },
-    { path: '/Jobs/:id', component: JobDetails, name: 'JobDetails', props: true },
+    { path: '/Home', component: Home, name: 'Home', redirect: '/' },
+    { path: '/About', component: About, name: 'About', redirect: '/' },
+    { path: '/Jobs', component: Jobs, name: 'Jobs', redirect: '/' },
+    { path: '/Jobs/:id', component: JobDetails, name: 'JobDetails', props: true, redirect: '/' },
     // redirect
-    { path: '/all-jobs', redirect: '/Jobs'  },
+    { path: '/all-jobs', redirect: '/'  },
     // catchall 404 (Catches any route that doesn't match)
     { path: '/:catchAll(.*)', name: 'NotFound', component: NotFound }
 ]

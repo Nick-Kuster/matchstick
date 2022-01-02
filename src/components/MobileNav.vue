@@ -1,14 +1,31 @@
 <template>
   <div id="sidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>                   
+    <router-link class="nav-link nav-head" to="/"><strong>RACE</strong></router-link>
+    <router-link class="nav-link nav-sub" to="/About"><strong>5K</strong></router-link>
+    <router-link class="nav-link nav-sub" to="/About"><strong>10K</strong></router-link>
+    <router-link class="nav-link nav-sub" to="/About"><strong>HALF</strong></router-link>
+    <hr/>
+    <router-link class="nav-link nav-head" :to="{ name: 'About' }"><strong>TRAINING</strong></router-link>
+    <router-link class="nav-link nav-head" :to="{ name: 'Jobs' }"><strong>REGISTER</strong></router-link>
+    <router-link class="nav-link nav-head" :to="{ name: 'Jobs' }"><strong>SPONSERS</strong></router-link>
+    
+    <hr/>
+    <router-link class="nav-link nav-head" :to="{ name: 'Jobs' }"><strong>GET INVOLVED</strong></router-link>
+    <router-link class="nav-link nav-sub" to="/"><strong>VOLUNTEER</strong></router-link>
+    <router-link class="nav-link nav-sub"  to="/"><strong>BECOME A SPONSER</strong></router-link>
+    <router-link class="nav-link nav-sub" to="/"><strong>DONATE</strong></router-link>
+    
+    <hr/>
+    <router-link class="nav-link nav-head" :to="{ name: 'About' }"><strong>CONTACT US</strong></router-link>
+    
+    <hr/>
   </div>
-  <button class="open mobile-nav-open" @click="openNav"><i  @click="openNav" class="fa fa-bars mobile-nav-open"></i></button>
+  
+  <nav class="navbar">
+    <button class="open mobile-nav-open" @click="openNav"><span  @click="openNav" class="fa fa-bars mobile-nav-open"> </span></button>
+  </nav>
 </template>
-
 <script>
 export default {
   name: "mobileNav",
@@ -21,8 +38,6 @@ export default {
     this.sideNavOpen = false;
     document.addEventListener("click", (e) => {
       const sideNav = document.getElementById("sidenav");
-      console.log(e.target);
-      console.log(this.sideNavOpen);
       if(e.target !== sideNav && this.sideNavOpen && !e.target.parentElement?.classList.contains("mobile-nav-open")){
         this.closeNav();
       }
@@ -45,14 +60,19 @@ export default {
 </script>
 
 <style scoped>
-  .open{
-    position:fixed;
-    z-index: 1;
-    right: 5%;
-    top: 2%;
-    font-size: 2rem;
+  .navbar {
+    position: fixed;
     background: rgba(187, 44, 46, 0.9);
-      color: #fff;
+    width:100%;
+    top: 0;
+    text-align: right;
+    justify-content: flex-end;
+  }
+  .open{
+    font-size: 2rem;
+    border: white 1px;
+    background: rgba(187, 44, 46, 0);
+    color: #fff;
   }
    /* The side navigation menu */
   .sidenav {
@@ -94,6 +114,14 @@ export default {
     margin-left: 50px;
   }
 
+  .nav-head {
+    text-align: left;
+  }
+  .nav-sub {
+    text-align: left;
+    margin-left: 2rem;
+  }
+   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -105,6 +133,5 @@ export default {
       display:none;
       color: #fff;
     }
-
   }
 </style>

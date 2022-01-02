@@ -3,7 +3,7 @@
         <Nav id="navbar-desktop"></Nav>
         <MobileNav id="navbar-mobile"></MobileNav>
         <Header></Header>
-        <router-view/>
+        <router-view class="router-view"/>
         <Footer></Footer>            
 </template>
 
@@ -48,6 +48,9 @@ export default {
   #navbar-mobile {
     display:block
   }
+  .router-view {
+    margin-top:4rem;
+  }
   @media (min-width: 992px) {
     #navbar-desktop {
       display:block
@@ -55,5 +58,8 @@ export default {
     #navbar-mobile {
       display:none
     }
+    .router-view {
+    margin-top:0;
+  }
   }
 </style>
