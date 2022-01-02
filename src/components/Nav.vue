@@ -73,6 +73,7 @@ export default {
     .dropdown-menu .dropdown-item:hover {
         opacity: .9;
         background:none;
+        color:black;
     }
     .nav-link.router-link-active {
         background: rgba(221, 201, 202, 0.397);
