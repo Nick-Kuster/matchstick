@@ -76,10 +76,12 @@ export default {
         color:black;
     }
     .nav-link.router-link-active {
-        background: rgba(221, 201, 202, 0.397);
-        
+        background: rgba(221, 201, 202, 0.397);        
         color: black;
-        border-radius: 5%
+        border-radius: 5%;
+        padding-top: 0;
+        padding-bottom: 0;
+
     }
     .dropdown-menu .nav-link.router-link-active {
         background: rgba(221, 201, 202, 0.397);
