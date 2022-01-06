@@ -30,8 +30,8 @@
     .contact-container {    
         display: grid;
         max-height: 10vh;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-areas: ". contact-info .";
+        grid-template-columns: 1fr;
+        grid-template-areas: "contact-info";
     }
     .contact-info {
         grid-area: contact-info;
@@ -39,7 +39,10 @@
         color: rgba(187, 44, 46);
         display: grid;
         grid-template-rows: 1fr 6fr;
+    }
 
+    .phone, .email {
+        font-size: 1.25rem !important;
     }
     .contact-details {
         text-align:left;
@@ -52,4 +55,15 @@
         color: rgba(187, 44, 46);
         text-decoration: none;
     }
+    
+  @media (min-width: 992px) {
+    .contact-container {    
+        max-height: 10vh;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: ". contact-info .";
+    }
+    .phone, .email {
+        font-size: 1.25rem !important;
+    }
+  }
 </style>
