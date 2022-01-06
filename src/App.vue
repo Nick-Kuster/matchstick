@@ -50,6 +50,8 @@ export default {
   }
   .router-view {
     margin-top:4rem;
+    min-height: 35rem;
+
   }
   @media (min-width: 992px) {
     #navbar-desktop {

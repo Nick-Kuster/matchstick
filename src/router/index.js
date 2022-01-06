@@ -1,18 +1,26 @@
-import { createRouter, createWebHistory} from 'vue-router'
-import About from '../views/About'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home  from '../views/Home'
-import Jobs  from '../views/jobs/Jobs'
-import JobDetails  from '../views/jobs/JobDetails'
 import UnderConstruction  from '../views/UnderConstruction'
+import RaceMaps  from '../views/RaceMaps'
 import NotFound  from '../views/NotFound'
+import Contact from '../views/Contact'
+import Registration from '../views/Registration'
+import BecomeSponsor from '../views/BecomeSponsor'
+import Volunteer from '../views/Volunteer'
+import Donate from '../views/Donate'
+import Sponsors from '../views/Sponsors'
 
 
 const routes = [
     { path: '/', component: UnderConstruction, name: 'UnderConstruction' },
     { path: '/Home', component: Home, name: 'Home', redirect: '/' },
-    { path: '/About', component: About, name: 'About', redirect: '/' },
-    { path: '/Jobs', component: Jobs, name: 'Jobs', redirect: '/' },
-    { path: '/Jobs/:id', component: JobDetails, name: 'JobDetails', props: true, redirect: '/' },
+    { path: '/Contact', component: Contact, name: 'Contact' },
+    { path: '/Registration', component: Registration, name: 'Registration', redirect: '/' },
+    { path: '/BecomeSponsor', component: BecomeSponsor, name: 'BecomeSponsor', redirect: '/' },
+    { path: '/Volunteer', component: Volunteer, name: 'Volunteer', redirect: '/' },
+    { path: '/Donate', component: Donate, name: 'Donate', redirect: '/' },
+    { path: '/Sponsors', component: Sponsors, name: 'Sponsors', redirect: '/' },
+    { path: '/RaceMaps/:race', component: RaceMaps, name: 'RaceMaps', props: true},
     // redirect
     { path: '/all-jobs', redirect: '/'  },
     // catchall 404 (Catches any route that doesn't match)

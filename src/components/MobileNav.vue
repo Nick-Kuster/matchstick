@@ -1,28 +1,30 @@
 <template>
   <div id="sidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>                   
-    <router-link class="nav-link nav-head" to="/"><strong>RACE</strong></router-link>
-    <router-link class="nav-link nav-sub" to="/About"><strong>5K</strong></router-link>
-    <router-link class="nav-link nav-sub" to="/About"><strong>10K</strong></router-link>
-    <router-link class="nav-link nav-sub" to="/About"><strong>HALF</strong></router-link>
+    <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a> 
+    
+    <router-link class="nav-link nav-head" to="/"><strong>HOME</strong></router-link>          
+    <router-link class="nav-link nav-head"  id="navbarDropdown" :to="{ name: 'RaceMaps', params: { race: '5k' } }" aria-haspopup="true" aria-expanded="false"><strong>RACE MAPS</strong></router-link>
     <hr/>
-    <router-link class="nav-link nav-head" :to="{ name: 'About' }"><strong>TRAINING</strong></router-link>
-    <router-link class="nav-link nav-head" :to="{ name: 'Jobs' }"><strong>REGISTER</strong></router-link>
-    <router-link class="nav-link nav-head" :to="{ name: 'Jobs' }"><strong>SPONSERS</strong></router-link>
+    <!-- <router-link class="nav-link nav-head" :to="{ name: 'About' }"><strong>TRAINING</strong></router-link> -->
+    <router-link class="nav-link nav-head" :to="{ name: 'Registration' }"><strong>REGISTER</strong></router-link>
+    <!-- <router-link class="nav-link nav-head" :to="{ name: 'Sponsors' }"><strong>SPONSoRS</strong></router-link> -->
     
     <hr/>
-    <router-link class="nav-link nav-head" :to="{ name: 'Jobs' }"><strong>GET INVOLVED</strong></router-link>
-    <router-link class="nav-link nav-sub" to="/"><strong>VOLUNTEER</strong></router-link>
-    <router-link class="nav-link nav-sub"  to="/"><strong>BECOME A SPONSER</strong></router-link>
-    <router-link class="nav-link nav-sub" to="/"><strong>DONATE</strong></router-link>
+    <router-link class="nav-link nav-head" :to="{ name: 'Volunteer' }"><strong>GET INVOLVED</strong></router-link>
+    <router-link class="nav-link nav-sub" :to="{ name: 'Volunteer' }"><strong>VOLUNTEER</strong></router-link>
+    <router-link class="nav-link nav-sub" :to="{ name: 'BecomeSponsor' }"><strong>BECOME A SPONSOR</strong></router-link>
+    <router-link class="nav-link nav-sub" :to="{ name: 'Donate' }"><strong>DONATE</strong></router-link>
     
     <hr/>
-    <router-link class="nav-link nav-head" :to="{ name: 'About' }"><strong>CONTACT US</strong></router-link>
+    <router-link class="nav-link nav-head" :to="{ name: 'Contact' }"><strong>CONTACT US</strong></router-link>
     
     <hr/>
+    
+    <div class="logo-container"><img src="..\assets\img\matchstick\matchstick-challenge-no-bg.png" alt="logo" class="nav-logo"></div>
   </div>
   
   <nav class="navbar">
+    <div class="logo-container"><router-link class="nav-link nav-head" to="/"><img src="..\assets\img\matchstick\matchstick-challenge-no-bg.png" alt="logo" class="logo"></router-link></div>
     <button class="open mobile-nav-open" @click="openNav"><span  @click="openNav" class="fa fa-bars mobile-nav-open"> </span></button>
   </nav>
 </template>
@@ -60,6 +62,16 @@ export default {
 </script>
 
 <style scoped>
+  .nav-logo {
+    width: 10rem;
+  }
+  .logo-container{
+    position: absolute;
+    left: 10%;
+  }
+  .logo {
+    max-height: 5rem;
+  }
   .navbar {
     position: fixed;
     background: rgba(187, 44, 46, 0.9);
@@ -94,7 +106,6 @@ export default {
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
     color: #fff;
     display: block;
     transition: 0.3s;
@@ -129,7 +140,7 @@ export default {
   } 
   
   @media (min-width: 992px) {
-    .open, .sidenav {
+    .open, .sidenav, .logo-container{
       display:none;
       color: #fff;
     }

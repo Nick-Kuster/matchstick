@@ -1,21 +1,14 @@
 <template>
     <h1>Home</h1>
     <section class="blog-list m-auto d-flex">
-        <!-- <div>
-        <button @click="redirect">Redirect</button>
-        <button @click="back">Go back</button>
-        <button @click="forward">Go forward</button>
-        </div> -->
-        <Blog class="blog m-auto" v-for="blog of blogs" :key="blog.id" :content="blog.content" :imageurl="blog.imageurl"></Blog>
     </section>
 </template>
 
 <script>
-    import Blog from '../components/Blog.vue'
     export default {
         name: 'Home',
         components: {
-            Blog
+            
         },
         data() {
             return {

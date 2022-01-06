@@ -2,35 +2,27 @@
   <nav class="navbar navbar-expand-lg ">
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="logo-container">
+            <router-link class="nav-link nav-head" to="/"><img src="..\assets\img\matchstick\matchstick-challenge-no-bg.png" alt="logo" class="logo"></router-link>
+        </div>
         <div class="m-auto inner-nav">
             <ul class="navbar-nav navbar-items">
-                <!-- <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" to="/"><strong>HOME</strong></router-link></li> -->
+                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" to="/"><strong>HOME</strong></router-link></li>
                 <li class="nav-item dropdown ml-lg-5 m-auto">
-                     <router-link class="dropdown-toggle nav-link"  id="navbarDropdown" to="/" aria-haspopup="true" aria-expanded="false"><strong>RACE</strong></router-link>
-                    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <strong>RACE</strong>
-                    </a> -->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <router-link class="dropdown-item nav-link" to="/"><strong>RACE</strong></router-link>
-                        <router-link class="dropdown-item nav-link" to="/About"><strong>5K</strong></router-link>
-                        <router-link class="dropdown-item nav-link" to="/About"><strong>10K</strong></router-link>
-                        <router-link class="dropdown-item nav-link" to="/About"><strong>HALF MARATHON</strong></router-link>
-                    </div>
+                    <router-link class="nav-link"  id="navbarDropdown" :to="{ name: 'RaceMaps', params: { race: '5k' } }" aria-haspopup="true" aria-expanded="false"><strong>RACE MAPS</strong></router-link>
                 </li>
-                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'About' }"><strong>TRAINING</strong></router-link></li>
-                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Jobs' }"><strong>REGISTER</strong></router-link></li>
-                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Jobs' }"><strong>SPONSERS</strong></router-link></li>
+                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Registration' }"><strong>REGISTER</strong></router-link></li>
                 <li class="nav-item dropdown ml-lg-5 m-auto">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <strong>GET INVOLVED</strong>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item nav-link" href="#"><strong>VOLUNTEER</strong></a>
-                    <a class="dropdown-item nav-link"  href="#"><strong>BECOME A SPONSER</strong></a>
-                    <a class="dropdown-item nav-link" href="#"><strong>DONATE</strong></a>
+                    <router-link class="nav-link" :to="{ name: 'Volunteer' }"><strong>VOLUNTEER</strong></router-link>
+                    <router-link class="nav-link" :to="{ name: 'BecomeSponsor' }"><strong>BECOME A SPONSOR</strong></router-link>
+                    <router-link class="nav-link" :to="{ name: 'Donate' }"><strong>DONATE</strong></router-link>
                     </div>
                 </li>                
-                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'About' }"><strong>CONTACT US</strong></router-link></li>
+                <li class="nav-item ml-lg-5 m-auto"><router-link class="nav-link" :to="{ name: 'Contact' }"><strong>CONTACT US</strong></router-link></li>
             </ul>
         </div>
     </div>
@@ -46,8 +38,16 @@ export default {
 </script>
 
 <style scoped>
+    .logo-container {
+        position: absolute;
+        top: 1rem;
+        left: 6rem;
+        background-color:rgba(187, 44, 46);
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
     .logo {
-        width: 12rem;
+        width: 10rem;
     }
     .inner-nav {
         display:flex;
@@ -56,6 +56,8 @@ export default {
         justify-content: end;
         background: rgba(187, 44, 46);
         right: 0;
+        position: fixed;
+        width: 100%;
     }
     .nav-link {
         color: #ffffff;
@@ -75,22 +77,11 @@ export default {
         background:none;
         color:black;
     }
-    .nav-link.router-link-active {
-        background: rgba(221, 201, 202, 0.397);        
-        color: black;
-        border-radius: 5%;
-        padding-top: 0;
-        padding-bottom: 0;
-
-    }
-    .dropdown-menu .nav-link.router-link-active {
-        background: rgba(221, 201, 202, 0.397);
-        color: black;
-        border: none;
-        border-radius: 5%
-    }
+   
+  
     .nav-link:hover {
-        opacity: .9;
+        opacity: .8;
+        transition: opacity 1.5s;
     }
     
     @media (min-width: 992px) {
@@ -116,6 +107,7 @@ export default {
                 transform: scaleY(1)
             }
         }
+
         .navbar {
             min-height: 3rem;
         }
