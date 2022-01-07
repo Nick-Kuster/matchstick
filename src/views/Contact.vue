@@ -8,7 +8,7 @@
             </div>
            <div class="contact-details">
                <h2 class="phone">Phone: <a href="tel:330-324-2565"> (330) 324-2565</a></h2>
-               <h2 class="email">Email: <a href="mailto: wadsworthmatchstickrace@gmail.com">WadsworthMatchstick@gmail.com</a></h2>
+               <h2 class="email">Email: <a href="mailto: info@matchstickrace.com">Info@MatchStickRace.com</a></h2>
            </div>
         </div>            
     </div>

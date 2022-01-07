@@ -9,7 +9,7 @@
                     <i class="fa fa-phone phone-icon"></i><a href="tel:330-324-2565"><span class="phone ml-4">(330) 324-2565</span></a>
                 </div>
                 <div class="email">
-                    <i class="fa fa-envelope email-icon"></i><a href="mailto: wadsworthmatchstickrace@gmail.com"><span class="email ml-4"> WadsworthMatchstick@gmail.com</span></a>
+                    <i class="fa fa-envelope email-icon"></i><a href="mailto: info@matchstickrace.com"><span class="email ml-4"> Info@MatchStickRace.com</span></a>
                 </div>
                 <div class="social">
                     Follow us on social media!
