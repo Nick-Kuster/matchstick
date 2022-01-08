@@ -3,7 +3,7 @@
         <div class="footer-content">
             <div class="center footer-section">
                 <div class="logo-container">
-                    <img src="..\assets\img\matchstick\matchstick-challenge-no-bg.png" class="logo" alt="Matchstick Challenge Logo">
+                    <img src="https://i.imgur.com/QJRBibQ.png" class="logo" alt="Matchstick Challenge Logo">
                 </div>
                 <div class="phone">
                     <i class="fa fa-phone phone-icon"></i><a href="tel:330-324-2565"><span class="phone ml-4">(330) 324-2565</span></a>
@@ -31,7 +31,6 @@ export default {
 
 <style scoped>
     .footer-content {
-        margin-top: 1rem;
         background:rgba(187, 44, 46, 0.9);
         color: white;
         display:grid;

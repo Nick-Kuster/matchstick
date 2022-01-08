@@ -20,11 +20,11 @@
     
     <hr/>
     
-    <div class="logo-container"><img src="..\assets\img\matchstick\matchstick-challenge-no-bg.png" alt="logo" class="nav-logo"></div>
+    <div class="logo-container"><img src="https://i.imgur.com/QJRBibQ.png" alt="logo" class="nav-logo"></div>
   </div>
   
   <nav class="navbar">
-    <div class="logo-container"><router-link class="nav-link nav-head" to="/"><img src="..\assets\img\matchstick\matchstick-challenge-no-bg.png" alt="logo" class="logo"></router-link></div>
+    <div class="logo-container"><router-link class="nav-link nav-head" to="/"><img src="https://i.imgur.com/QJRBibQ.png" alt="logo" class="logo"></router-link></div>
     <button class="open mobile-nav-open" @click="openNav"><span  @click="openNav" class="fa fa-bars mobile-nav-open"> </span></button>
   </nav>
 </template>

@@ -3,7 +3,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="logo-container">
-            <router-link class="nav-link nav-head" to="/"><img src="..\assets\img\matchstick\matchstick-challenge-no-bg.png" alt="logo" class="logo"></router-link>
+            <router-link class="nav-link nav-head" to="/"><img src="https://i.imgur.com/QJRBibQ.png" alt="logo" class="logo"></router-link>
         </div>
         <div class="m-auto inner-nav">
             <ul class="navbar-nav navbar-items">

@@ -21,9 +21,6 @@
 <script>
 export default {        
     components: {
-        // FiveK,
-        // TenK,
-        // Half
     },
     props: ['race'],
     data() {
@@ -47,14 +44,15 @@ export default {
                     break;
                 default:
                         break;
-        }
+            }
         }
     },
     updated() {
         this.changeMap();
     },
     mounted() {
-        this.changeMap();
+        this.changeMap();        
+        window.scrollTo(0,0);
     }
 }
 </script>
@@ -72,13 +70,11 @@ export default {
     }
     .race-header {
         display: grid;    
-        background-image: url('../assets/img/matchstick/Runners-solid.jpg');    
+        background-image: url('https://i.imgur.com/N1qogVX.jpg');    
         grid-template-columns: 1fr;
-        /* min-height: 75vh; */
         grid-template-rows: repeat(2, 1fr);
     }
     .race-title-container {
-        /* grid-column: 1 / span 2; */
         display: grid;
         place-content:center;
         background: rgba(255,255,255,0.7); 
@@ -105,6 +101,7 @@ export default {
         display:grid;
         justify-content:center;
         background: #004b8d;
+        /* background: black; */
         color: white;
         grid-template-columns: 1fr;
     }

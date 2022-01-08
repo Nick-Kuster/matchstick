@@ -28,17 +28,17 @@
         padding: 1rem;
     }
     .contact-container {    
-        display: grid;
-        max-height: 10vh;
+        display: flex;    
+        flex-direction: column;    
+        align-items: center;
         grid-template-columns: 1fr;
         grid-template-areas: "contact-info";
     }
     .contact-info {
         grid-area: contact-info;
-        padding-top:5rem;
+        padding:5rem 2rem;
         color: rgba(187, 44, 46);
         display: grid;
-        grid-template-rows: 1fr 6fr;
     }
 
     .phone, .email {
@@ -53,17 +53,16 @@
     }
     a:hover {
         color: rgba(187, 44, 46);
-        text-decoration: none;
     }
     
   @media (min-width: 992px) {
     .contact-container {    
-        max-height: 10vh;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-areas: ". contact-info .";
+        display: flex;    
+        flex-direction: column;    
     }
     .phone, .email {
         font-size: 1.25rem !important;
+        text-align: center;
     }
   }
 </style>
