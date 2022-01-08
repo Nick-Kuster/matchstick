@@ -40,19 +40,28 @@
         components: {
             
         },        
+        data() {
+            return {
+                // you can just use Props for htis
+                interval: null
+            }
+        },
         beforeMount() {
-            this.setTimer();
         },
         mounted() {  
+            this.setTimer();
             window.scrollTo(0,0);
+        },
+         beforeUnmount() {
+            clearInterval(this.interval);
         },
         methods: {
             setTimer: function() {
                 // Set the date we're counting down to
-                var countDownDate = new Date("Jul 27, 2022 19:00:00").getTime();
+                var countDownDate = new Date("Jun 27, 2022 19:00:00").getTime();
 
                 // Update the count down every 1 second
-                var x = setInterval(function() {
+                this.interval = setInterval(function() {
                     // Get today's date and time
                     var now = new Date().getTime();
 
@@ -71,7 +80,7 @@
 
                     // If the count down is finished, write some text
                     if (distance < 0) {
-                        clearInterval(x);
+                        clearInterval(this.interval);
                         document.getElementById("timer").innerHTML = "EXPIRED";
                     }
                 }, 1000);
