@@ -4,7 +4,7 @@
         <div class="countdown-container">
             <div class="inner-countdown-container">
                 <h1>Race Day Countdown!</h1>
-                <h2>Saturday, June 24th 2022</h2>
+                <h2>Friday, June 24th 2022</h2>
                 <h2 id="timer"></h2>
             </div>
         </div>
